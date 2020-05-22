@@ -268,8 +268,26 @@ Check all the historical amendments:
 Create branch:
     git branch with_git_comments
     git branch
-Change branch:
+Change branch + Amendments:
     git checkout with_git_comment
-
+    git add methods.py
+    git commit -m "new version"
+Merge to the master branch:
+    git checkout master
+    git merge with_git_comment
+    git branch -d with_git_comment
+Create a repertory based on the existing repertory on Github:
+    git remote add origin https://github.com/joanserfaty/python_recap.git
+    git push -u origin master
+Create a new repertory on GitHub:
+    echo "# python_recap" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin https://github.com/joanserfaty/python_recap.git
+    git push -u origin master
+Bring back the project of a colleague:
+    git pull PythonProjects master
+    
 
 """
