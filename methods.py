@@ -245,3 +245,31 @@ sql_remove_duplicates = """WITH CTE AS (
                 RN = ROW_NUMBER() OVER (PARTITION BY [RunDate], [Deal Number] ORDER BY [RunDate], [Deal Number])
                 FROM TableA)
                 DELETE FROM CTE WHERE RN>1"""
+
+# ------------------------------------------------GitHub------------------------------------------------------------------
+"""
+version:
+    git --version
+configuration initial:
+    git config --global user.name "joanserfaty"
+    git config --global user.email "joan.serfaty@hotmail.com"
+create a project:
+    mkdir PythonProjects
+select the project:
+    cd PythonProjects
+Initialiser git:
+    git init
+Add Content to the Git repository:
+    git add methods.py
+Save our amendments:
+    git commit -m "project initi without"
+Check all the historical amendments:
+    git log
+Create branch:
+    git branch with_git_comments
+    git branch
+Change branch:
+    git checkout with_git_comment
+
+
+"""
