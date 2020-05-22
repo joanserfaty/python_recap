@@ -290,5 +290,10 @@ Bring back the project of a colleague:
     git pull PythonProjects master
 Push file amendments to GitHub:
     git push
+Create a README.md description in GitHub:
+    touch README.md
+    git add .
+    git commit -m "Readme file"
+    git push
 
 """
