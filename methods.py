@@ -288,6 +288,7 @@ Create a new repertory on GitHub:
     git push -u origin master
 Bring back the project of a colleague:
     git pull PythonProjects master
-    
+Push file amendments to GitHub:
+    git push
 
 """
