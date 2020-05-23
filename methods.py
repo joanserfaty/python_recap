@@ -23,7 +23,7 @@ import logging
 
 class Methods:
     def __init__(self):
-        self.smtp_host = 'smtp-goss.int.worlf.socgen'
+        self.smtp_host = 'xxxxx'
         self.smtp_port = 25
         self.smtp_timeout = 10
 
