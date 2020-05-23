@@ -237,7 +237,28 @@ class Methods:
 
         logging.info('BREACH')
 
+#----------------------------------------------Unit testing Exemple----------------------------------------------------
 
+class TestRandomGen(unittest.TestCase):
+    def test_random_gen(self):
+        """The "next_num function has two arguments, the both lists must have the same size
+        and should only contain items with a 'float' type.
+        We test the robustness of our code with 5 inadequate scenarios."""
+        test_1 = RandomGen([1.0, 0.8, 0.6], [0.7, 0.1, 'a'])
+        test_2 = RandomGen([1.0, 0.8, 0.6], [0.7, 0.1])
+        test_3 = RandomGen([], [0.7, 0.1, 0.2])
+        test_4 = RandomGen([1.0, 0.8, 0.7], True)
+        test_5 = RandomGen([1.0, 0.8, 0.2], [5, 10, 20])
+
+        list_test = [test_1, test_2, test_3, test_4, test_5]
+        for elem in list_test:
+            with self.assertRaises(SystemExit) as cm:
+                elem.next_num()
+            self.assertEqual(cm.exception.code, None)
+
+
+if __name__ == '__main__':
+    unittest.main()
 # ------------------------------------------------SQL------------------------------------------------------------------
 
 sql_remove_duplicates = """WITH CTE AS ( 
