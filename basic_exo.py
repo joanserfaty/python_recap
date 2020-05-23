@@ -1,9 +1,8 @@
-# Array 3D
+# 1 - Array 3D
 array = [[[0 for col in range(8)]for col in range(3)]for col in range(5)]
 print(array)
 
-# Format
-
+# 2 - Formating
 subjects=["I", "You"]
 verbs=["Play", "Love"]
 objects =["Hockey","Football"]
@@ -15,14 +14,14 @@ for sub in subjects:
 
 print(sentence)
 
-#Zlib
+#3 - Compress with Zlib
 import zlib
 s = 'hello world!hello world!hello world!hello world!'
 t = zlib.compress(s)
 print t
 t = zlib.decompress(t)
 
-#Random password
+#4 - Generate Random password
 import string
 import random
 
@@ -32,15 +31,14 @@ len_pass = random.randint(5, 10)
 rand = [random.choice(letters + numbers) for elem in range(len_pass)]
 rand = ''.join(rand)
 
-#Return index number
+#5 - Return index number
 lis = ['b','o','j','o','r','b']
        #Only First item
 ind = lis.index('b')
        # All of them
 ind_list = [elem for elem, id in enumerate(lis) if id == 'b']
 
-#Generators
-
+#6 - Generators
 def Generator(n):
     i=0
     while i < n:
@@ -52,14 +50,13 @@ oven_list=[]
 for elem in Generator(9):
     oven_list.append(elem)
 
-#Find All
+#7 - Find All
 import re
 
 stri = 'Bonjour je m appel Joan'
 r = re.findall('j', stri)
 
-# Fibonacci
-
+#8 - Fibonacci
 def fibo(n):
     if n == 0: return 0
     elif n == 1: return 1
@@ -67,8 +64,7 @@ def fibo(n):
 
 r = fibo(7)
 
-
-# Adress mail
+#9 - Adress mail
 import re
 
 mail = 'john.serfaty@google.com'
@@ -78,8 +74,7 @@ prenom = r2.group(1)
 nom = r2.group(2)
 ad = r2.group(3)
 
-# decorators
-
+#10 - Decorators
 def check(func):
     def inside(num1, num2):
         if num2 == 0:
@@ -92,27 +87,25 @@ def check(func):
 def div(a, b):
     return a/b
 
-
 result = div(5, 0)
 
-# Map
+#11 - Map
 my_l = [1,2,3,4,5,6,7,8,9,10]
 my_func = (lambda x: x ** 2)
 my_new_l = map(my_func, my_l)
 
-# Lambda
+#12 - Lambda
 my_l = [1,2,3,4,5,6,7,8,9,10]
 func = (lambda x: x % 2 == 0)
 new_l = filter(func, my_l)
 
-# Tuples
+#13 - Tuples
 tup = (1,2,3,4,5,6,7,8,9,10)
 half = len(tup)//2
 first_half = sum(tup[:half])
 second_half = sum(tup[half:])
 
-# Dict
-
+#14 - Dict
 dict = {}
 dict2 = {}
 for elem in range(1,21):
@@ -122,20 +115,18 @@ for elem in range(1,21):
 print(dict)
 print(dict2)
 
-# Bank Details
+#15 - Bank Details
 bank_details = [('D', 300), ('D', 300), ('W', 200), ('W', 100)]
 credit = sum([cash for way, cash in bank_details if way == 'W'])
 debit = sum([cash for way, cash in bank_details if way == 'D'])
 
-
-# List comprehension
+#16 - List comprehension
 my_str = '1,2,3,4,5,6,7,8,9'
 my_str = my_str.split(',')
 my_str = [elem for elem in my_str if int(elem) % 2 != 0]
 my_str = ','.join(my_str)
 
-#Number of letters and digit
-
+#17 - Number of letters and digit
 my_str = 'hello world! 123'
 digit, alpha = 0, 0
 
@@ -146,7 +137,7 @@ for elem in my_str:
         alpha += 1
 
 
-# Even number
+#18 - Even number
 my_numb = [numb for numb in range(1000, 3001)]
 final_list = []
 for elem in my_numb:
@@ -161,8 +152,7 @@ for elem in my_numb:
         final_list.append(elem)
 
 
-# list of number divised by 5
-
+#19 - list of number divised by 5
 def my_list(numb):
     my_list = [int(elem) for elem in numb if int(elem) % 5 == 0]
     return my_list
@@ -170,7 +160,7 @@ def my_list(numb):
 r = my_list([0100, 0011, 1010, 1001])
 print(r)
 
-# string to list and remove duplicates
+#20 - string to list and remove duplicates
 def convert_str(stri):
     my_list = stri.split(' ')
     my_list = set(my_list)
@@ -180,7 +170,7 @@ stri = 'hello world and practice makes perfect and hello world again'
 new_stri = convert_str(stri)
 print(new_stri)
 
-# Add Elem to Dict
+#21 - Add Elem to Dict
 def dict(numb):
     dico = {}
     for elem in range(1, numb+1):
@@ -192,7 +182,7 @@ my_dict = dict(8)
 print(my_dict)
 
 
-# Factorial
+#22 - Factorial
 def factorial(numb):
     itera = 1
     for elem in range(numb, 0, -1):
@@ -203,7 +193,7 @@ def factorial(numb):
 my_fac = factorial(7)
 print(my_fac)
 
-# List to string
+#23 - List to string
 def number_d():
     my_numb = [str(num) for num in range(2000, 3000) if (num % 7 == 0) and not (num % 5 == 0)]
     my_str = ','.join(my_numb)
