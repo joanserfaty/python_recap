@@ -7,6 +7,7 @@ import ctypes
 import glob
 import os
 import smtplib
+import unittest
 import matplotlib.pyplot as plt
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
